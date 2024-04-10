@@ -15,10 +15,10 @@ Welcome to our implementation of Conway's Game of Life in Python! This project p
 game-of-life/
 │
 ├── gameoflife/          # Main package directory
-│   ├── __init__.py      # Initializes the Python package
+│   ├── __init__.py      # Initialises the Python package
 │   ├── core.py          # Core logic for the Game of Life
 │   ├── utils.py         # Utility functions, e.g. pattern loading
-│   └── visualization.py # Visualization tools
+│   └── visualisation.py # Visualisation tools
 │
 ├── docs/                # Documentation files
 │   ├── index.md         # Homepage of the documentation
