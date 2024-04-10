@@ -10,6 +10,38 @@ Welcome to our implementation of Conway's Game of Life in Python! This project p
 - **Flexible Ruleset**: While the classic Game of Life rules are the default, our implementation allows for experimenting with alternate rulesets.
 - **User Interaction**: Supports starting, pausing, and resetting the simulation, as well as modifying the grid state before or during the simulation.
 
+## Project Structure
+```bash
+game-of-life/
+│
+├── gameoflife/          # Main package directory
+│   ├── __init__.py      # Initializes the Python package
+│   ├── core.py          # Core logic for the Game of Life
+│   ├── utils.py         # Utility functions, e.g. pattern loading
+│   └── visualization.py # Visualization tools
+│
+├── docs/                # Documentation files
+│   ├── index.md         # Homepage of the documentation
+│   └── usage.md         # Usage examples and explanations
+│
+├── tests/               # Automated tests directory
+│   ├── __init__.py
+│   ├── test_core.py     # Tests for core logic
+│   └── test_utils.py    # Tests for utility functions
+│
+├── examples/            # Example scripts and notebooks
+│   └── basic_example.py # Basic usage example
+│
+├── .gitignore           # Specifies intentionally untracked 
+│                        #    files to ignore
+├── LICENSE              # License information
+├── README.md            # Project overview, installation, 
+│                        #    and usage guide
+└── setup.py             # Setup script for installing 
+                         #    the package
+
+```
+
 ## Getting Started
 
 ### Prerequisites
@@ -38,9 +70,9 @@ Ensure you have Python 3.6+ installed on your system. You can download Python fr
 
 ### Running the Simulation
 To start the Game of Life simulation, run:
-    ```bash
+```bash
     python -m gameoflife
-    ```
+```
 
 Follow the on-screen instructions to customise your simulation parameters.
 
@@ -53,9 +85,9 @@ Want to contribute? Great! Feel free to fork the repository, make your changes, 
 ## Testing
 To run the automated tests for this project, execute:
 
-    ```bash
+```bash
     pytest
-    ```
+```
 
 ## License
 Distributed under the MIT License. See [LICENSE](LICENCE) for more information.
