@@ -1,4 +1,6 @@
 # Game of Life in Python
+[![passing](https://github.com/rossop/game-of-life/actions/workflows/python-tests.yml/badge.svg)](https://github.com/rossop/game-of-life/actions/workflows/python-tests.yml)
+
 
 Welcome to our implementation of Conway's Game of Life in Python! This project provides a Python package for simulating the Game of Life, a cellular automaton devised by the British mathematician John Horton Conway in 1970. Our implementation allows users to explore the fascinating world of cellular automata through an interactive and customisable environment.
 
