@@ -1,5 +1,5 @@
-import random
 from typing import List
+import random
 
 def create_grid(rows: int, cols: int) -> List[List[int]]:
     """
@@ -12,29 +12,33 @@ def create_grid(rows: int, cols: int) -> List[List[int]]:
     Returns:
         List[List[int]]: A 2D list representing the grid, initialized with all
             cells dead (0).
+
+    Raises:
+        ValueError: If `rows` or `cols` are non-positive.
     """
+    if rows <= 0 or cols <= 0:
+        raise ValueError("rows and cols must be positive integers")
     return [[0 for _ in range(cols)] for _ in range(rows)]
 
-
-def populate_grid(grid: List[List[int]]) -> List[List[int]]:
+def populate_grid(grid: List[List[int]]) -> None:
     """
-    Poulates Grid with alive cells at randomly generated positions.
+    Populates Grid with alive cells at randomly generated positions.
 
     Args:
         grid (List[List[int]]): A 2D list representing the grid, initialized 
             with all cells dead (0).
 
-    Returns:
-        List[List[int]]: A 2D list representing the grid, initialized with some
-            cells dead (0)
-            cells alive (1)
+    Raises:
+        ValueError: If `grid` is empty or not a 2D list.
     """
+    if not grid or not grid[0]:
+        raise ValueError("Grid cannot be empty")
     rows = len(grid)
-    cols = len(grid[0]) if rows > 0 else 0
+    cols = len(grid[0])
     for rr in range(rows):
-        for cc in range (cols):
-            grid[rr][cc] = random.randint(0,1)
-            
+        for cc in range(cols):
+            grid[rr][cc] = random.randint(0, 1)
+
 
 def main() -> None:    
     rows, cols = 10, 10  # Example grid size
