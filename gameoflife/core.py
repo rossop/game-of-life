@@ -1,6 +1,7 @@
 from typing import List
 import random
 
+
 def create_grid(rows: int, cols: int) -> List[List[int]]:
     """
     Creates a grid for the Game of Life.
@@ -20,12 +21,13 @@ def create_grid(rows: int, cols: int) -> List[List[int]]:
         raise ValueError("rows and cols must be positive integers")
     return [[0 for _ in range(cols)] for _ in range(rows)]
 
+
 def populate_grid(grid: List[List[int]]) -> None:
     """
     Populates Grid with alive cells at randomly generated positions.
 
     Args:
-        grid (List[List[int]]): A 2D list representing the grid, initialized 
+        grid (List[List[int]]): A 2D list representing the grid, initialized
             with all cells dead (0).
 
     Raises:
@@ -40,7 +42,7 @@ def populate_grid(grid: List[List[int]]) -> None:
             grid[rr][cc] = random.randint(0, 1)
 
 
-def main() -> None:    
+def main() -> None:
     rows, cols = 10, 10  # Example grid size
     grid = create_grid(rows, cols)
     populate_grid(grid)

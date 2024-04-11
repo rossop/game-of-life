@@ -17,7 +17,8 @@ def test_create_grid_positive_dimensions(rows: int, cols: int):
     grid = create_grid(rows, cols)
     assert len(grid) == rows, "Grid has the correct number of rows"
     assert all(len(row) == cols for row in grid), "All rows have the correct number of columns"
-    assert all(cell == 0 for row in grid for cell in row), "All cells are initialized to dead (0)"
+    assert all(cell == 0 for row in grid for cell in row), "All cells are initialised to dead (0)"
+
 
 @pytest.mark.parametrize("rows, cols", [
     (-1, 5),
@@ -34,6 +35,7 @@ def test_create_grid_negative_dimensions(rows: int, cols: int):
     """
     with pytest.raises(ValueError):
         create_grid(rows, cols)
+
 
 @pytest.mark.parametrize("rows, cols", [
     (5, 5),
@@ -53,6 +55,7 @@ def test_populate_grid_non_empty(rows: int, cols: int):
     assert len(grid) == rows, "Grid has the correct number of rows after population"
     assert all(len(row) == cols for row in grid), "All rows have the correct number of columns after population"
     assert any(cell == 1 for row in grid for cell in row), "At least one cell is alive after population"
+
 
 def test_populate_grid_empty():
     """
